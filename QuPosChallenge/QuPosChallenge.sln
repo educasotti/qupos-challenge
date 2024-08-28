@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuPosChallenge", "QuPosChallenge.csproj", "{45987BEA-BFED-4FF6-AFCE-57535A272674}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuPosChallenge.Tests", "..\QuPosChallenge.Tests\QuPosChallenge.Tests.csproj", "{B8569784-F7B0-461B-92C5-5788ACAF4381}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45987BEA-BFED-4FF6-AFCE-57535A272674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45987BEA-BFED-4FF6-AFCE-57535A272674}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45987BEA-BFED-4FF6-AFCE-57535A272674}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45987BEA-BFED-4FF6-AFCE-57535A272674}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8569784-F7B0-461B-92C5-5788ACAF4381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8569784-F7B0-461B-92C5-5788ACAF4381}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8569784-F7B0-461B-92C5-5788ACAF4381}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8569784-F7B0-461B-92C5-5788ACAF4381}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FBDFB7F0-8BC1-4FF1-9C70-3ABB44BF5AC2}
+	EndGlobalSection
+EndGlobal
