@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/QuPosChallenge/.vs
+/QuPosChallenge/bin/Debug/net8.0
+/QuPosChallenge/obj
+/QuPosChallenge.Tests/bin/Debug/net8.0
+/QuPosChallenge.Tests/obj
