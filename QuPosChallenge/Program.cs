@@ -2,15 +2,16 @@
 
 var matrix = new List<string>
         {
-            "cold",
-            "wind",
-            "chll",
-            "abcd"
+            "abcdc",
+            "fgwio",
+            "chill",
+            "pqnsd",
+            "uvdxy"
         };
 
 var wordStream = new List<string>
         {
-            "cold", "wind", "chill", "snow", "wind", "cold", "heat", "rain", "cold", "cold"
+            "cold", "wind", "chill", "snow", "chill", "cold", "heat", "rain", "cold", "cold"
         };
 
 var wordFinder = new WordFinder(matrix);

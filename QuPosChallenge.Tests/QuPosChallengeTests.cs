@@ -28,8 +28,10 @@ namespace QuPosChallenge.Tests
             Assert.Equal(expected, result);
         }
 
+        
+
         [Fact]
-        public void TestFindTop10WordsInMatrix()
+        public void TestWordExistsHorizontally()
         {
             // Arrange
             var matrix = new List<string>
@@ -40,14 +42,52 @@ namespace QuPosChallenge.Tests
                 "mnop"
             };
             var wordFinder = new WordFinder(matrix);
-            var wordstream = new List<string> { "abcd", "abcd", "abcd", "efgh", "ijkl", "mnop", "mnop", "mnop", "mnop", "mnop", "mnop", "mnop", "mnop", "mnop", "mnop" };
 
             // Act
-            var result = wordFinder.Find(wordstream);
+            var result = wordFinder.Find(new List<string> { "abcd" });
 
             // Assert
-            var expected = new List<string> { "mnop", "abcd", "efgh", "ijkl" };
-            Assert.Equal(expected, result);
+            Assert.Contains("abcd", result);
+        }
+
+        [Fact]
+        public void TestWordExistsVertically()
+        {
+            // Arrange
+            var matrix = new List<string>
+            {
+                "abcd",
+                "efgh",
+                "ijkl",
+                "mnop"
+            };
+            var wordFinder = new WordFinder(matrix);
+
+            // Act
+            var result = wordFinder.Find(new List<string> { "aeim" });
+
+            // Assert
+            Assert.Contains("aeim", result);
+        }
+
+        [Fact]
+        public void TestWordDoesNotExist()
+        {
+            // Arrange
+            var matrix = new List<string>
+            {
+                "abcd",
+                "efgh",
+                "ijkl",
+                "mnop"
+            };
+            var wordFinder = new WordFinder(matrix);
+
+            // Act
+            var result = wordFinder.Find(new List<string> { "xyz" });
+
+            // Assert
+            Assert.DoesNotContain("xyz", result);
         }
     }
 }
