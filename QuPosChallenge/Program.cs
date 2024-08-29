@@ -1,5 +1,4 @@
 ﻿using QuPosChallenge;
-using System.IO;
 
 var matrix = new List<string>(File.ReadAllLines("matrix.txt"));
 

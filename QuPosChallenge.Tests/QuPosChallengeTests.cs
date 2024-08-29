@@ -1,7 +1,3 @@
-using QuPosChallenge;
-using System.Collections.Generic;
-using Xunit;
-
 namespace QuPosChallenge.Tests
 {
     public class QuPosChallengeTests
@@ -89,5 +85,7 @@ namespace QuPosChallenge.Tests
             // Assert
             Assert.DoesNotContain("xyz", result);
         }
+
+        
     }
 }
