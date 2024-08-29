@@ -4,21 +4,27 @@ var matrix = new List<string>(File.ReadAllLines("matrix.txt"));
 
 
 var wordStream = new List<string>(File.ReadAllLines("wordstream.txt"));
-
-
-var wordFinder = new WordFinder(matrix);
-var result = wordFinder.Find(wordStream);
-if(result.Count() == 0)
+try
 {
-    Console.WriteLine("No words were found.");
-    return;
-}
-else
-{
-    Console.WriteLine("Top 10 Words Found:");
-    foreach (var word in result)
+    var wordFinder = new WordFinder(matrix);
+    var result = wordFinder.Find(wordStream);
+    if (result.Count() == 0)
     {
-        Console.WriteLine(word);
+        Console.WriteLine("No words were found.");
+        return;
     }
+    else
+    {
+        Console.WriteLine("Top 10 Words Found:");
+        foreach (var word in result)
+        {
+            Console.WriteLine(word);
+        }
+    }
+}catch (Exception ex)
+{
+    Console.WriteLine("An error occurred: " + ex.Message);
 }
+
+
 
