@@ -1,24 +1,25 @@
 ﻿using QuPosChallenge;
+using System.IO;
 
-var matrix = new List<string>
-        {
-            "abcdc",
-            "fgwio",
-            "chill",
-            "pqnsd",
-            "uvdxy"
-        };
+var matrix = new List<string>(File.ReadAllLines("matrix.txt"));
 
-var wordStream = new List<string>
-        {
-            "cold", "wind", "chill", "snow", "chill", "cold", "heat", "rain", "cold", "cold"
-        };
+
+var wordStream = new List<string>(File.ReadAllLines("wordstream.txt"));
+
 
 var wordFinder = new WordFinder(matrix);
 var result = wordFinder.Find(wordStream);
-
-Console.WriteLine("Top 10 Words Found:");
-foreach (var word in result)
+if(result.Count() == 0)
 {
-    Console.WriteLine(word);
+    Console.WriteLine("No words were found.");
+    return;
 }
+else
+{
+    Console.WriteLine("Top 10 Words Found:");
+    foreach (var word in result)
+    {
+        Console.WriteLine(word);
+    }
+}
+
